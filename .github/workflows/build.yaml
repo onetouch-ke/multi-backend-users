@@ -28,15 +28,7 @@ jobs:
       id: login-ecr
       uses: aws-actions/amazon-ecr-login@v1
 
-    - name: Build and Push boards-service
-      env:
-        TAG: ${{ github.run_number }}
-        ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-      run: |
-        IMAGE=$ECR_REGISTRY/multi-backend-boards:${TAG}
-        docker build -t $IMAGE -f boards/Dockerfile ./boards
-        docker push $IMAGE
-
+    
     - name: Build and Push users-service
       env:
         TAG: ${{ github.run_number }}
