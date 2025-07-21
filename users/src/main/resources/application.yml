@@ -10,7 +10,7 @@ spring:
     url: jdbc:mariadb://msa-mariadb-rds20250721022536253700000001.cxca0yecyzdl.ap-northeast-2.rds.amazonaws.com:3306/UsersService
 >>>>>>> 3469fa271d80980b16bb02bd92dbc060b509ea5c
     username: MSA_User
-    password: P@ssw0rd
+    password: Passw0rd
     driver-class-name: org.mariadb.jdbc.Driver
   jpa:
     hibernate:
